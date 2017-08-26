@@ -1,0 +1,9 @@
+{
+  "name": "buyVersusRent",
+  "version": "0.0.1",
+  "description": "buy versus rent app",
+  "main": "index.js",
+  "repository": "https://github.com/lagache/buy-versus-rent.git",
+  "author": "Christophe Gachiniard",
+  "license": "Commercial license"
+}
