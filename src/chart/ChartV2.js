@@ -136,7 +136,10 @@ class ChartV2 extends Component {
 
   render() {
     return (
-      <div className="chartV2"></div>
+      <div>
+        <h3>Chart 2: animation on axis and bars, bars overlapping on Mobile, axis position default</h3>
+        <div className="chartV2"></div>
+      </div>
     );
   }
 };

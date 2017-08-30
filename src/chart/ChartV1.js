@@ -11,7 +11,13 @@ class ChartV1 extends Component {
 
   updateChart(data) {
   	var options = {
-      seriesBarDistance: 10
+      seriesBarDistance: 10,
+      axisX: {
+          position: 'start'
+        },
+        axisY: {
+          position: 'end'
+        }
     };
 
     var responsiveOptions = [
@@ -30,7 +36,10 @@ class ChartV1 extends Component {
 
   render() {
     return (
-      <div className="chartV1"></div>
+      <div>
+        <h3>Chart 1: no animation, bars overlapping on Mobile, axis top/right</h3>
+        <div className="chartV1"></div>
+      </div>
     );
   }
 };

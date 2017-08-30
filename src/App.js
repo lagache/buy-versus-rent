@@ -3,7 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 import ChartV1 from './chart/ChartV1';
 import ChartV2 from './chart/ChartV2';
+import ChartV3 from './chart/ChartV3';
+
+import 'jquery';
+//import 'waves/dist/waves';
+//import 'mdbootstrap/js/mdb.js';
+
 import 'mdbootstrap/css/mdb.css';
+//import 'mdbootstrap/css/style.css';
+//import 'mdbootstrap/css/bootstrap.css';
 
 var data = {
   labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -21,23 +29,19 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Buy Versus Rent</h2>
         </div>
-        <button type="button" className="btn btn-primary">Primary</button>
-        TEST
-        <div className="switch">
-          <label>
-            Off
-            <input type="checkbox"/>
-            <span className="lever"></span>
-            On
-          </label>
+        <div>
+          <h3>Test import MD Bootstrap components</h3>
+          <button type="button" className="btn btn-primary">Button MD Primary</button>
+          <button type="button" className="btn btn-secondary">Button MD Secondary</button>
         </div>
-        <form className="range-field">
-          <input type="range" min="0" max="100" />
-        </form>
-        Chart V1:
+       
+        <input type="range" min="0" max="100" />
+        
         <ChartV1 data={data}/>
-        Chart V2:
+        
         <ChartV2 data={data}/>
+
+         <ChartV3 data={data}/>
       </div>
     );
   }
