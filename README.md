@@ -4,14 +4,14 @@ Project created by lagache (MIT license)
 
 ## Get started
 
-Clone the repository
-### git clone https://github.com/lagache/buy-versus-rent.git buy-versus-rent
+### Clone the repository
+$> git clone https://github.com/lagache/buy-versus-rent.git buy-versus-rent
 
-Install dependencies
-### 'yarn install'
+### Install dependencies
+$> yarn install
 
-Run the project
-### 'yarn start'
+### Run the project
+$> yarn start
 
 
 ## Folder Structure
