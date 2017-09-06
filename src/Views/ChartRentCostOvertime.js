@@ -2,11 +2,17 @@ import React, { Component } from 'react';
 import Chartist from 'chartist';
 import 'chartist/dist/chartist.css';
 
+var data = {
+    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+    series: [
+      [25000, 50000, 75000, 100000, 125000, 150000, 175000, 200000, 225000, 250000]
+    ]
+  };
+
 class ChartV1 extends Component {
 	
-
   componentDidMount() {
-    this.updateChart(this.props.data);
+    this.updateChart(data);
   }
 
   updateChart(data) {
