@@ -2,20 +2,43 @@ import React, { Component } from 'react';
 import Chartist from 'chartist';
 import 'chartist/dist/chartist.css';
 
-var data = {
-    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
-    series: [
-      [25000, 50000, 75000, 100000, 125000, 150000, 175000, 200000, 225000, 250000]
-    ]
-  };
-
 class ChartV1 extends Component {
 	
-  componentDidMount() {
-    this.updateChart(data);
+  constructor(props) {
+    super(props);
+
+    let labels = [];
+    let seriesX = [];
+    for (let year = 1; year <= props.numberOfYears; year++) {
+      labels.push(year);
+      seriesX.push(props.amountWeekly * 52 * year);
+    }
+
+    this.state = {
+      labels: labels,
+      series:[[seriesX]]
+    }
+  } 
+
+  componentDidUpdate() {
+    this.updateChart();
   }
 
-  updateChart(data) {
+  componentWillReceiveProps(nextProps) {
+   let labels = [];
+    let seriesX = [[]];
+    for (let year = 1; year <= nextProps.numberOfYears; year++) {
+      labels.push(year);
+      seriesX[0].push(nextProps.amountWeekly * 52 * year);
+    }
+
+    this.setState({
+      labels: labels,
+      series: seriesX
+    });
+  }
+
+  updateChart() {
   	var options = {
       seriesBarDistance: 10,
       axisX: {
@@ -37,7 +60,7 @@ class ChartV1 extends Component {
       }]
     ];
 
-    new Chartist.Bar('.chartV1', data, options, responsiveOptions);
+    new Chartist.Bar('.chartV1', this.state, options, responsiveOptions);
   }
 
   render() {

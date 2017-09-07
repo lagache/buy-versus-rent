@@ -20,8 +20,6 @@ class App extends Component {
           <h2>Buy Versus Rent</h2>
         </div>
         <RentVSBuy/>
-       
-        <input type="range" min="0" max="100" />
       </div> 
     );
   }
