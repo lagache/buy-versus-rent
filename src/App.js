@@ -15,7 +15,7 @@ import 'mdbootstrap/css/style.css';
 import 'mdbootstrap/css/mdb.css';
 
 const initialState = {
-    test: 'OK'
+    start: 'KO'
 };
 
 const store = configureStore(initialState);

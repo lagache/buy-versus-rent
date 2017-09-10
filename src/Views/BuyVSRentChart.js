@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Chartist from 'chartist';
 import 'chartist/dist/chartist.css';
+import { connect } from 'react-redux';
+
+import {start} from '../Actions'
 
 class BuyVSRentChart extends Component {
 	
@@ -56,14 +59,28 @@ class BuyVSRentChart extends Component {
     new Chartist.Bar('.buyVSRentChart', this.state, options, responsiveOptions);
   }
 
+  handleClick() {
+    this.props.dispatch(start());
+  }
+
   render() {
+    
     return (
       <div>
         <h3>Buy VS Rent</h3>
+        <input type="button" className="btn btn-primary" value="Start" onClick={() => this.handleClick()}/>
+        {this.props.start}
         <div className="buyVSRentChart"/>
+
       </div>
     );
   }
 };
 
-export default BuyVSRentChart;
+function mapStateToProps(state) {
+    return {
+      start: state.BuyVSRent.start
+    }
+}
+
+export default connect(mapStateToProps)(BuyVSRentChart);

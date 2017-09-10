@@ -1,19 +1,19 @@
-import React from 'react';
+//import React from 'react';
 import { createStore, applyMiddleware, compose } from 'redux';
 import rootReducer from '../reducers';
-import { reduxReactRouter, routerStateReducer, ReduxRouter } from 'redux-router';
-import { devTools } from 'redux-devtools';
+//import { reduxReactRouter, routerStateReducer, ReduxRouter } from 'redux-router';
+//import { devTools } from 'redux-devtools';
 import thunkMiddleware from 'redux-thunk';
-import createHistory from 'history/createHashHistory';
-import { Route } from 'react-router';
+//import createHistory from 'history/createHashHistory';
+//import { Route } from 'react-router';
 
-import App from './../App';
+//import App from './../App';
 
 // Configure routes like normal
-const routes = (
-  <Route path="/" component={App}>
-  </Route>
-);
+// const routes = (
+//   <Route path="/" component={App}>
+//   </Route>
+// );
 
 const createStoreWithMiddleware = compose(
     // Save for redux middleware
