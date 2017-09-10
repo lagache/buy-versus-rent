@@ -68,7 +68,7 @@ class BuyVSRentChart extends Component {
     return (
       <div>
         <h3>Buy VS Rent</h3>
-        <input type="button" className="btn btn-primary" value="Start" onClick={() => this.handleClick()}/>
+        <button type="button" className="btn btn-primary" onClick={() => this.handleClick()}>Start</button>
         {this.props.start}
         <div className="buyVSRentChart"/>
 

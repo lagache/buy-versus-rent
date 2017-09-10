@@ -4,7 +4,7 @@ export default function buyVSRent(state = [], action = {}) {
     switch (action.type) {
     	case START:
     		return {
-    			start: 'YEAH'
+    			start: (state.start !== 'YEAH')?'YEAH':'BOO'
     		}
     	default:
             return state;
