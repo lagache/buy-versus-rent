@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-import Slider from 'react-rangeslider'
 import 'react-rangeslider/lib/index.css'
 
 import ChartRentCostOvertime from './ChartRentCostOvertime';
@@ -39,23 +37,31 @@ class Rent extends Component {
   render() {
     return (
       <div className="container">
-        Rent
+        <h2>Rent</h2>
         <div className="row">
           <div className="col">
-             <Slider
-              min={0}
-              max={100}
-              value={this.state.numberOfYears}
-              onChangeStart={this.handleChangeStart}
-              onChange={this.handleChange}
-              onChangeComplete={this.handleChangeComplete}
-            />
             <div className="md-form">
-              <input type="number" id="form2" className="form-control" onBlur={(e) => this.populateAmount(e)}/>
-              <label htmlFor="form2">Amount weekly</label>
+              <input 
+                type="number" 
+                id="weekly-rent" 
+                className="form-control" 
+                onBlur={(e) => this.populateAmount(e)}/>
+              <label htmlFor="form2">Rent (Weekly)</label>
             </div>
           </div>
-        </div>  
+        </div>
+        <div className="row">
+          <div className="col">
+            <div className="md-form">
+              <input 
+                type="number"
+                id="interest-rate" 
+                className="form-control" 
+                onBlur={(e) => this.populateAmount(e)}/>
+              <label htmlFor="form2">Interest rate (savings)</label>
+            </div>
+          </div>
+        </div>
         <div className="row">
           <ChartRentCostOvertime amountWeekly={this.state.amountWeekly} numberOfYears={this.state.numberOfYears}/>
         </div>

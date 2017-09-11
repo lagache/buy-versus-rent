@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import 'chartist/dist/chartist.css';
 
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
 
-import RentVSBuy from './Views/RentVSBuy';
+import BuyVSRent from './Views/BuyVSRent';
 
 import 'mdbootstrap';
 
@@ -14,7 +15,6 @@ import 'mdbootstrap/css/style.css';
 import 'mdbootstrap/css/mdb.css';
 
 const initialState = {
-    start: 'KO'
 };
 
 const store = configureStore(initialState);
@@ -29,7 +29,7 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <h2>Buy Versus Rent</h2>
           </div>
-          <RentVSBuy/>
+          <BuyVSRent/>
         </div>
       </Provider> 
     );

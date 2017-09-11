@@ -64,9 +64,13 @@ class ChartV1 extends Component {
   }
 
   render() {
+    if (this.props.amountWeekly === 0) {
+      return(<div></div>);
+    }
+
     return (
       <div>
-        <h3>Chart 1: no animation, bars overlapping on Mobile, axis top/right</h3>
+        <h4>Cost of renting</h4>
         <div className="chartV1"/>
       </div>
     );

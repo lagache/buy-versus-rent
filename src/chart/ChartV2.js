@@ -6,7 +6,15 @@ class ChartV2 extends Component {
   
 
   componentDidMount() {
-    this.updateChart(this.props.data);
+    var data = {
+      labels: ['2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027', '2028'],
+      series: [
+        [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
+        [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
+      ]
+    };
+
+    this.updateChart(data);
   }
 
   updateChart(data) {
@@ -25,7 +33,7 @@ class ChartV2 extends Component {
       }]
     ];
 
-    const chart = new Chartist.Bar('.chartV2', data, options, responsiveOptions);
+    const chart = new Chartist.Bar('.ct-chart', data, options, responsiveOptions);
     // Let's put a sequence number aside so we can use it in the event callbacks
     var seq = 0,
       delays = 80,
@@ -137,8 +145,8 @@ class ChartV2 extends Component {
   render() {
     return (
       <div>
-        <h3>Chart 2: animation on axis and bars, bars overlapping on Mobile, axis position default</h3>
-        <div className="chartV2"></div>
+        <h4>Buy versus rent over time</h4>
+        <div className="ct-chart"></div>
       </div>
     );
   }
