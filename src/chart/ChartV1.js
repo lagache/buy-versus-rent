@@ -38,7 +38,7 @@ class ChartV1 extends Component {
     return (
       <div>
         <h3>Chart 1: no animation, bars overlapping on Mobile, axis top/right</h3>
-        <div className="chartV1"></div>
+        <div className="chartV1"/>
       </div>
     );
   }
