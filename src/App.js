@@ -7,9 +7,7 @@ import configureStore from './store/configureStore';
 
 import RentVSBuy from './Views/RentVSBuy';
 
-//import 'waves/dist/waves';
-//import 'mdbootstrap/js/bootstrap.js';
-import 'mdbootstrap/js/mdb.js';
+import 'mdbootstrap';
 
 import 'mdbootstrap/css/bootstrap.css';
 import 'mdbootstrap/css/style.css';
