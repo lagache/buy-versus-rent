@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Chartist from 'chartist';
 import { connect } from 'react-redux';
 import Slider from 'react-rangeslider';
-import {start} from '../Actions';
+import {setNumberOfYear} from '../Actions';
 
 import ChartV2 from '../chart/ChartV2';
 
@@ -11,17 +11,13 @@ class BuyVSRentCommon extends Component {
     constructor(props) {
     super(props);
     this.prepareData(props);
-
-    this.state = {
-      numberOfYears: 10
-
-    }
   }
 
   handleChange = value => {
     this.setState({
       numberOfYears: value
     })
+    this.props.dispatch(setNumberOfYear(value));
   };
 
    handleChangeComplete = () => {
@@ -67,7 +63,7 @@ class BuyVSRentCommon extends Component {
   }
 
   handleClick() {
-    this.props.dispatch(start());
+    //this.props.dispatch(start());
   }
 
    populateAmount(e) {
@@ -81,11 +77,11 @@ class BuyVSRentCommon extends Component {
         <br/>
         <div className="row">
           <div className="col">
-            <h2>{this.state.numberOfYears} years</h2>
+             <h2>{this.props.numberOfYear} years</h2>
             <Slider
                 min={1}
                 max={30}
-                value={this.state.numberOfYears}
+                value={this.props.numberOfYear}
                 onChangeStart={this.handleChangeStart}
                 onChange={this.handleChange}
                 onChangeComplete={this.handleChangeComplete}
@@ -119,7 +115,7 @@ class BuyVSRentCommon extends Component {
 
 function mapStateToProps(state) {
   return {
-    start: state.BuyVSRent.start
+    numberOfYear: state.BuyVSRent.numberOfYear
   }
 }
 
