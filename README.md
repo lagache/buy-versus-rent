@@ -13,6 +13,16 @@ $> yarn install
 ### Run the project
 $> yarn start
 
+## Update (pull changes)
+
+### Clone the repository
+$> git pull
+
+### Install dependencies (in case they've changed)
+$> yarn install
+
+### Run the project
+$> yarn start
 
 ## Folder Structure
 
