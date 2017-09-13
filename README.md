@@ -13,9 +13,9 @@ $> yarn install
 ### Run the project
 $> yarn start
 
-## Update (pull changes)
+## Update (get latest changes)
 
-### Clone the repository
+### Get the latest version
 $> git pull
 
 ### Install dependencies (in case they've changed)
