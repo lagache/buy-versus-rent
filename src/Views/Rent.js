@@ -6,31 +6,6 @@ import 'react-rangeslider/lib/index.css'
 import {setSavingInterestRate, setWeeklyRent, setTaxRate} from '../Actions';
 
 class Rent extends Component {
-	
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      amountWeekly: 0,
-      numberOfYears: 10
-
-    }
-  }
-
-  handleChangeStart = () => {
-    console.log('Change event started');
-  };
-
-  handleChange = value => {
-    this.setState({
-      numberOfYears: value
-    })
-  };
-
-   handleChangeComplete = () => {
-    this.render();
-  };
-
 
   setSavingInterestRate(e) {
     this.props.dispatch(setSavingInterestRate(e.target.value));

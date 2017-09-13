@@ -1,5 +1,6 @@
 {
   "name": "buy-versus-rent-v1",
+  "homepage" : "http://lagache.github.io/buy-versus-rent",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -58,7 +59,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [

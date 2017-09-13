@@ -5,6 +5,10 @@ export const SET_WEEKLY_RENT = 'SET_WEEKLY_RENT';
 export const SET_SAVING_INTEREST_RATE = 'SET_SAVING_INTEREST_RATE';
 export const SET_TAX_RATE = 'SET_TAX_RATE';
 
+export const SET_HOUSE_PRICE = 'SET_HOUSE_PRICE';
+export const SET_MORTGAGE_RATE = 'SET_MORTGAGE_RATE';
+
+
 export function setNumberOfYear(numberOfYear) {
     return {
         type: SET_NUMBER_OF_YEAR,
@@ -46,3 +50,18 @@ export function setTaxRate(taxRate) {
         taxRate: taxRate
     };
 }
+
+export function setHousePrice(housePrice) {
+    return {
+        type: SET_HOUSE_PRICE,
+        housePrice: housePrice
+    };
+}
+
+export function setMortgageRate(mortgageRate) {
+    return {
+        type: SET_MORTGAGE_RATE,
+        mortgageRate: mortgageRate
+    };
+}
+
