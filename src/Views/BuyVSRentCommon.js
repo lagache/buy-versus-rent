@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Chartist from 'chartist';
 import { connect } from 'react-redux';
 import Slider from 'react-rangeslider';
-import {setNumberOfYear} from '../Actions';
+import {setNumberOfYear, setMoneyAvailableNow, setMoneyAvailableFuture} from '../Actions';
 
 import ChartV2 from '../chart/ChartV2';
 
@@ -14,9 +14,6 @@ class BuyVSRentCommon extends Component {
   }
 
   handleChange = value => {
-    this.setState({
-      numberOfYears: value
-    })
     this.props.dispatch(setNumberOfYear(value));
   };
 
@@ -62,12 +59,12 @@ class BuyVSRentCommon extends Component {
     
   }
 
-  handleClick() {
-    //this.props.dispatch(start());
+  setMoneyAvailableNow(e) {
+    this.props.dispatch(setMoneyAvailableNow(e.target.value));
   }
 
-   populateAmount(e) {
-    this.setState({amountWeekly: e.target.value});
+  setMoneyAvailableFuture(e) {
+    this.props.dispatch(setMoneyAvailableFuture(e.target.value));
   }
 
   render() {
@@ -91,13 +88,13 @@ class BuyVSRentCommon extends Component {
         <div className="row">
           <div className="col">
             <div className="md-form form-group">
-              <input type="number" id="money-avail-now" className="form-control" onBlur={(e) => this.populateAmount(e)}/>
+              <input type="number" id="money-avail-now" className="form-control" onBlur={(e) => this.setMoneyAvailableNow(e)}/>
               <label htmlFor="form2">Money available (now)</label>
             </div>
           </div>
           <div className="col">
             <div className="md-form">
-              <input type="number" id="money-avail-fortnightly" className="form-control" onBlur={(e) => this.populateAmount(e)}/>
+              <input type="number" id="money-avail-fortnightly" className="form-control" onBlur={(e) => this.setMoneyAvailableFuture(e)}/>
               <label htmlFor="form2">Money available (fortnightly)</label>
             </div>
           </div>
