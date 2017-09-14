@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.a796365f.css",
-  "main.css.map": "static/css/main.a796365f.css.map",
-  "main.js": "static/js/main.6b6f0c99.js",
-  "main.js.map": "static/js/main.6b6f0c99.js.map",
+  "main.css": "static/css/main.d73b7f65.css",
+  "main.css.map": "static/css/main.d73b7f65.css.map",
+  "main.js": "static/js/main.ca81df8e.js",
+  "main.js.map": "static/js/main.ca81df8e.js.map",
   "static/media/Roboto-Bold.eot": "static/media/Roboto-Bold.ecdd509c.eot",
   "static/media/Roboto-Bold.ttf": "static/media/Roboto-Bold.e31fcf18.ttf",
   "static/media/Roboto-Bold.woff": "static/media/Roboto-Bold.dc81817d.woff",
@@ -25,5 +25,6 @@
   "static/media/Roboto-Thin.woff2": "static/media/Roboto-Thin.954bbdeb.woff2",
   "static/media/arrow_left.svg": "static/media/arrow_left.270f72df.svg",
   "static/media/arrow_right.svg": "static/media/arrow_right.d9ccc77c.svg",
-  "static/media/logo.svg": "static/media/logo.5d5d9eef.svg"
+  "static/media/buy-houses.jpg": "static/media/buy-houses.75babafc.jpg",
+  "static/media/rent-houses.jpg": "static/media/rent-houses.1bfed891.jpg"
 }
