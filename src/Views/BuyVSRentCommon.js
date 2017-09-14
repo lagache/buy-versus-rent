@@ -74,7 +74,7 @@ class BuyVSRentCommon extends Component {
         <br/>
         <div className="row">
           <div className="col">
-             <h2>{this.props.numberOfYear} years</h2>
+             <h4>{this.props.numberOfYear} years</h4>
             <Slider
                 min={1}
                 max={30}
@@ -87,13 +87,15 @@ class BuyVSRentCommon extends Component {
         </div>
         <div className="row">
           <div className="col">
-            <div className="md-form form-group">
+            <div className="md-form form-sm">
+              <i className="fa fa-dollar prefix"/>
               <input type="number" id="money-avail-now" className="form-control" onBlur={(e) => this.setMoneyAvailableNow(e)}/>
               <label htmlFor="form2">Money available (now)</label>
             </div>
           </div>
           <div className="col">
-            <div className="md-form">
+            <div className="md-form form-sm">
+              <i className="fa fa-dollar prefix"/>
               <input type="number" id="money-avail-fortnightly" className="form-control" onBlur={(e) => this.setMoneyAvailableFuture(e)}/>
               <label htmlFor="form2">Money available (fortnightly)</label>
             </div>

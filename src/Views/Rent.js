@@ -25,7 +25,8 @@ class Rent extends Component {
         <h2>Rent</h2>
         <div className="row">
           <div className="col">
-            <div className="md-form">
+            <div className="md-form form-sm">
+              <i className="fa fa-dollar prefix"/>
               <input 
                 type="number" 
                 id="weekly-rent" 
@@ -37,7 +38,8 @@ class Rent extends Component {
         </div>
         <div className="row">
           <div className="col">
-            <div className="md-form">
+            <div className="md-form form-sm">
+              <i className="fa fa-percent prefix"/>
               <input 
                 type="number"
                 id="interest-rate" 
@@ -50,7 +52,8 @@ class Rent extends Component {
         </div>
          <div className="row">
           <div className="col">
-            <div className="md-form">
+            <div className="md-form form-sm">
+              <i className="fa fa-percent prefix"/>
               <input 
                 type="number"
                 id="tax-rate" 
@@ -62,7 +65,9 @@ class Rent extends Component {
           </div>
         </div>
         <div className="row">
-          <p>Saving balance: ${this.props.futureBalanceSavings}</p>
+          <div className="col">
+            <p>Saving balance: ${this.props.futureBalanceSavings}</p>
+          </div>
         </div>
       </div>
     );

@@ -21,7 +21,8 @@ class Buy extends Component {
         <h2>Buy</h2>
         <div className="row">
           <div className="col">
-            <div className="md-form">
+            <div className="md-form form-sm">
+              <i className="fa fa-dollar prefix"/>
               <input 
                 type="number" 
                 id="house-price" 
@@ -33,7 +34,8 @@ class Buy extends Component {
         </div>
         <div className="row">
           <div className="col">
-            <div className="md-form">
+            <div className="md-form form-sm">
+              <i className="fa fa-dollar prefix"/>
               <input 
                 type="number"
                 id="interest-rate" 
@@ -45,7 +47,9 @@ class Buy extends Component {
         </div>
         
         <div className="row">
-          <p>Money left (mortgage): ${this.props.mortgageMoneyLeft}</p>
+          <div className="col">
+            <p>Money left (mortgage): ${this.props.mortgageMoneyLeft}</p>
+          </div>
         </div>
       </div>
     );
