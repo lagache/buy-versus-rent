@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import 'chartist/dist/chartist.css';
 
@@ -25,10 +24,11 @@ class App extends Component {
     return (
       <Provider store={store}>
         <div className="App">
-          <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h2>Buy Versus Rent</h2>
-          </div>
+          <div className="section mb-4">
+            <div className="App-header">
+              <h2>Buy Versus Rent</h2>
+            </div>
+          </div>  
           <BuyVSRent/>
         </div>
       </Provider> 

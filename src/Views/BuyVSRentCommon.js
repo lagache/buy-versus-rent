@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import Slider from 'react-rangeslider';
 import {setNumberOfYear, setMoneyAvailableNow, setMoneyAvailableFuture} from '../Actions';
 
-import ChartV2 from '../chart/ChartV2';
-
 class BuyVSRentCommon extends Component {
 	
     constructor(props) {
@@ -71,47 +69,52 @@ class BuyVSRentCommon extends Component {
    
     return (
       <div className="container">
-        <br/>
-        <div className="row">
-          <div className="col">
-             <h4>{this.props.numberOfYear} years</h4>
-            <Slider
-                min={1}
-                max={30}
-                value={this.props.numberOfYear}
-                onChangeStart={this.handleChangeStart}
-                onChange={this.handleChange}
-                onChangeComplete={this.handleChangeComplete}
-              />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col">
-            <div className="md-form form-sm">
-              <i className="fa fa-dollar prefix"/>
-              <input type="number" id="money-avail-now" className="form-control" onBlur={(e) => this.setMoneyAvailableNow(e)}/>
-              <label htmlFor="form2">Money available (now)</label>
+        <h4 className="card-title text-center">
+          <i className="fa fa-bank"></i> Money and duration
+        </h4>
+        <div className="card-text">
+          <div className="row">
+            <div className="col">
+              <h5>
+                <i className="fa fa-hourglass-half"></i> Duration: {this.props.numberOfYear} years
+              </h5>
+              <Slider
+                  min={1}
+                  max={30}
+                  value={this.props.numberOfYear}
+                  onChangeStart={this.handleChangeStart}
+                  onChange={this.handleChange}
+                  onChangeComplete={this.handleChangeComplete}
+                />
             </div>
           </div>
-          <div className="col">
-            <div className="md-form form-sm">
-              <i className="fa fa-dollar prefix"/>
-              <input type="number" id="money-avail-fortnightly" className="form-control" onBlur={(e) => this.setMoneyAvailableFuture(e)}/>
-              <label htmlFor="form2">Money available (fortnightly)</label>
+          <div className="row">
+            <div className="col">
+              <div className="md-form form-sm">
+                <i className="fa fa-dollar prefix"/>
+                <input type="number" id="money-avail-now" className="form-control" onBlur={(e) => this.setMoneyAvailableNow(e)}/>
+                <label htmlFor="form2">Money available (now)</label>
+              </div>
             </div>
-          </div>
-        </div>  
-        <div className="row">
-          <div className="col">
-            <ChartV2/>
-            <div className="buyVSRentChart"/>
-          </div>
+            <div className="col">
+              <div className="md-form form-sm">
+                <i className="fa fa-dollar prefix"/>
+                <input type="number" id="money-avail-fortnightly" className="form-control" onBlur={(e) => this.setMoneyAvailableFuture(e)}/>
+                <label htmlFor="form2">Money available (fortnightly)</label>
+              </div>
+            </div>
+          </div>  
         </div>
-      </div>
+      </div>  
     ); 
   }
 };
-
+ // <div className="row">
+ //          <div className="col">
+ //            <ChartV2/>
+ //            <div className="buyVSRentChart"/>
+ //          </div>
+ //        </div>
 function mapStateToProps(state) {
   return {
     numberOfYear: state.BuyVSRent.numberOfYear

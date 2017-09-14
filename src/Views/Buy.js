@@ -18,40 +18,44 @@ class Buy extends Component {
   render() {
     return (
       <div className="container">
-        <h2>Buy</h2>
-        <div className="row">
-          <div className="col">
-            <div className="md-form form-sm">
-              <i className="fa fa-dollar prefix"/>
-              <input 
-                type="number" 
-                id="house-price" 
-                className="form-control" 
-                onChange={(e) => this.setHousePrice(e)}/>
-              <label htmlFor="form2">House price</label>
+        <h4 className="card-title text-center">
+          <i className="fa fa-home"></i> Buy a place
+        </h4>
+        <div className="card-text">
+          <div className="row">
+            <div className="col">
+              <div className="md-form form-sm">
+                <i className="fa fa-dollar prefix"/>
+                <input 
+                  type="number" 
+                  id="house-price" 
+                  className="form-control" 
+                  onChange={(e) => this.setHousePrice(e)}/>
+                <label htmlFor="form2">House price</label>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <div className="md-form form-sm">
+                <i className="fa fa-dollar prefix"/>
+                <input 
+                  type="number"
+                  id="interest-rate" 
+                  className="form-control" 
+                  onChange={(e) => this.setWMortgageRate(e)}/>
+                <label htmlFor="form2">Mortgage rate (%)</label>
+              </div>
+            </div>
+          </div>
+          
+          <div className="row">
+            <div className="col">
+              <p>Money left (mortgage): ${this.props.mortgageMoneyLeft}</p>
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col">
-            <div className="md-form form-sm">
-              <i className="fa fa-dollar prefix"/>
-              <input 
-                type="number"
-                id="interest-rate" 
-                className="form-control" 
-                onChange={(e) => this.setWMortgageRate(e)}/>
-              <label htmlFor="form2">Mortgage rate (%)</label>
-            </div>
-          </div>
-        </div>
-        
-        <div className="row">
-          <div className="col">
-            <p>Money left (mortgage): ${this.props.mortgageMoneyLeft}</p>
-          </div>
-        </div>
-      </div>
+      </div>  
     );
   }
 };
