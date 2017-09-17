@@ -2,6 +2,8 @@
 
 Project created by lagache (MIT license)
 
+Demo available at https://lagache.github.io/buy-versus-rent/
+
 ## Get started
 
 ### Clone the repository

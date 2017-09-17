@@ -1,6 +1,6 @@
 {
   "name": "buy-versus-rent",
-  "homepage" : "https://github.com/lagache/buy-versus-rent",
+  "homepage" : "https://lagache.github.io/buy-versus-rent/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
