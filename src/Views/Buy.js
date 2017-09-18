@@ -44,7 +44,7 @@ class Buy extends Component {
                   id="interest-rate" 
                   className="form-control" 
                   onChange={(e) => this.setWMortgageRate(e)}/>
-                <label htmlFor="form2">Mortgage rate (%)</label>
+                <label htmlFor="form2">Mortgage rate</label>
               </div>
             </div>
           </div>

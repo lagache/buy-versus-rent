@@ -12,8 +12,8 @@ class RentVSBuy extends Component {
   render() {
     return (
       <div className="container">
-        <div className="row">
-          <div className="col">
+        <div className="row justify-content-center">
+          <div className="col-md-10">
             <div className="card mb-4">
               <div className="card-body">
                 <BuyVSRentCommon />
@@ -22,10 +22,10 @@ class RentVSBuy extends Component {
           </div>
         </div>
         
-        <div className="row">
+        <div className="row justify-content-center">
           
-          <div className="col">
-            <div className="card">
+          <div className="col-xs-12 col-sm-6 col-md-5">
+            <div className="card mb-4">
               <div className="view overlay hm-white-slight">
                 <img src={rentHousePic} className="img-fluid" alt="rent a place"/>
               </div>
@@ -35,8 +35,8 @@ class RentVSBuy extends Component {
             </div>
           </div>
 
-          <div className="col">
-            <div className="card">
+          <div className="col-xs-12 col-sm-6 col-md-5">
+            <div className="card mb-4">
               <div className="view overlay hm-white-slight">
                 <img src={buyHousePic} className="img-fluid" alt="buy a place"/>
               </div>

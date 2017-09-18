@@ -49,7 +49,7 @@ class Rent extends Component {
                   className="form-control" 
                   onChange={(e) => this.setSavingInterestRate(e)}
                   value={this.props.savingInterestRate}/>
-                <label htmlFor="form2">Interest rate (%)</label>
+                <label htmlFor="form2">Interest rate</label>
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@ class Rent extends Component {
                   className="form-control" 
                   onChange={(e) => this.setTaxRate(e)}
                   value={this.props.taxRate}/>
-                <label htmlFor="form2">Tax rate (%)</label>
+                <label htmlFor="form2">Tax rate</label>
               </div>
             </div>
           </div>
