@@ -63,7 +63,7 @@ class BuyVSRentCommon extends Component {
     return (
       <div className="container">
         <h4 className="card-title text-center">
-          <i className="fa fa-bank"></i> Money and duration
+          <i className="fa fa-bank"></i> My current situation
         </h4>
         <div className="card-text">
           <div className="row">
