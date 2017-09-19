@@ -3,6 +3,7 @@ import Chartist from 'chartist';
 import { connect } from 'react-redux';
 import Slider from 'react-rangeslider';
 import {setNumberOfYear, setMoneyAvailableNow, setMoneyAvailableFuture} from '../Actions';
+import Gauge from 'react-svg-gauge';
 
 class BuyVSRentCommon extends Component {
 	
@@ -65,6 +66,17 @@ class BuyVSRentCommon extends Component {
           <i className="fa fa-bank"></i> Money and duration
         </h4>
         <div className="card-text">
+          <div className="row">
+            <div className="col text-center">
+                <Gauge 
+                 value={this.props.numberOfYear} 
+                 width={300} 
+                 height={160} 
+                 label=""
+                  min={1}
+                  max={30} />
+            </div>
+          </div>
           <div className="row">
             <div className="col">
               <h5>

@@ -5156,6 +5156,10 @@ react-router@3.0.5:
     prop-types "^15.5.6"
     warning "^3.0.0"
 
+react-svg-gauge@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-svg-gauge/-/react-svg-gauge-1.0.5.tgz#883bc843b0b31f809210553a0ebd5d9120909abf"
+
 react@^15.6.1:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
