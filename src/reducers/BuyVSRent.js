@@ -25,7 +25,7 @@ function getFutureBalanceSavings(state) {
 	    weeklyRent = state.weeklyRent || 0;
 
 	return futureValue(state.savingInterestRate/100*(1-taxRate/100)/12, 12*state.numberOfYear, 
-		               -1*(moneyAvailableFuture - weeklyRent*2), 
+		               -1*(moneyAvailableFuture*26/12 - weeklyRent*52/12), 
 		               -1*moneyAvailableNow, 
 		               0);
 }
